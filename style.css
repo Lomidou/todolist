@@ -1,0 +1,174 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #EBE3D5, #B0A695);
+  padding: 10px;
+}
+
+.todo {
+  width: 70%;
+  min-height: 200px;
+  background-color: white;
+  border-radius: 40px;
+  margin: 100px auto 10%;
+  padding: 20px;
+}
+.todo h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: "Fraunces", sans-serif;
+  margin: 20px;
+}
+.todo h2 img {
+  width: auto;
+  height: 40px;
+  margin-left: 10px;
+}
+.todo .add-task {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(239, 239, 239);
+  width: 100%;
+  height: 50px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+@media (max-width: 550px) {
+  .todo .add-task {
+    height: 50px;
+  }
+}
+.todo .add-task input {
+  background-color: transparent;
+  border-style: none;
+  outline: none;
+  padding: 10px;
+  width: 85%;
+}
+@media (max-width: 550px) {
+  .todo .add-task input {
+    width: 70%;
+    font-size: 13px;
+  }
+}
+.todo .add-task button {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(119, 107, 93);
+  border-radius: 40px;
+  padding: 10px;
+  width: 15%;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+}
+@media (max-width: 550px) {
+  .todo .add-task button {
+    width: 30%;
+  }
+}
+.todo .add-task button .addlist {
+  height: 100%;
+  width: auto;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(107%) contrast(107%);
+}
+@media (max-width: 550px) {
+  .todo .add-task button .addlist {
+    width: auto;
+    justify-content: center;
+  }
+}
+.todo ul li {
+  list-style-type: none;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding: 0px;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+}
+.todo ul li::before {
+  content: "";
+  position: absolute;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  left: -35px;
+  top: -2px;
+}
+@media (max-width: 550px) {
+  .todo ul li::before {
+    left: -40px;
+    top: -2px;
+  }
+}
+.todo ul li.checked {
+  text-decoration: line-through;
+  color: rgb(207, 207, 207);
+}
+.todo ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+.todo ul li span {
+  display: flex;
+  position: absolute;
+  right: 25px;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  background-color: rgb(176, 166, 149);
+  justify-content: center;
+  align-content: center;
+  font-size: 16px;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+@media (max-width: 550px) {
+  .todo ul li span {
+    right: 5px;
+    top: 2px;
+  }
+}
+.todo ul li span:hover {
+  background-color: rgb(119, 107, 93);
+}/*# sourceMappingURL=style.css.map */
